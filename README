@@ -1,0 +1,27 @@
+This is a mirror of http://www.vim.org/scripts/script.php?script_id=4437
+
+Syntax highlighting for ReDIF format used by RePEc:
+
+Source: http://openlib.org/acmes/root/docu/redif_1.html
+
+####### Supported:
+Comments
+Correct fields
+Correct templates
+Some special arguments
+Localize spell checking for Title, Abstract and some others (use :set spell to enable it)
+Highlights as error:
+    - Fields that do not belong to the current template.
+    - Fields that should belong to a cluster but do not.
+    - Wrong arguments (for most fields but not all)
+
+####### Not supported:
+Does not always highlights arguments as error even when they are erroneous. In particular:
+    - Does not check whether non-repeatable fields are repeated
+    - Does not check URLs
+    - Does not check logic (for instance "40-30" is not highlighted in a "Pages" field, even if 40 > 30)
+    - A few others
+
+Moreover, the spell checking does flag several common words in economics, such as Schumpeterian, macroeconometrics, etc.
+
+The file is well-commented; you can read it for more information.
